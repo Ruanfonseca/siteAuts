@@ -1,0 +1,31 @@
+.steps {
+    display: flex;
+    gap: 2rem; /* Reduzindo o espaçamento entre as etapas */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.step {
+    text-align: center;
+    background-color: #fff;
+    z-index: 1;
+    width: 120px;
+    padding: 0.5rem;
+    flex-grow: 1; /* Faz as etapas crescerem para preencher o espaço disponível */
+}
+
+.step svg {
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+    width: 100%;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.active > svg {
+    fill: #7076f4;
+}

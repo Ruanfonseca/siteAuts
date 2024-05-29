@@ -4,7 +4,6 @@ import { VscChromeClose } from "react-icons/vsc";
 import styled from "styled-components";
 import foodYummy from "../assets/FoodYummy.png";
 
-
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   const html = document.querySelector("html");
@@ -13,8 +12,11 @@ export default function Navbar() {
     <>
       <Nav>
         <div className="brand">
+
           <img src={foodYummy} alt="Icon" />
+          
           <div className="toggle">
+            
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
             ) : (
@@ -40,14 +42,15 @@ export default function Navbar() {
             <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#testimonials">Testimonials</a>
+            <a href="#testimonials">Testemunhos</a>
           </li>
           <li>
-            <a href="#products">Products</a>
+            <a href="#products">Produtos</a>
           </li>
           <li>
             <a href="#newsletter">Newsletter</a>
           </li>
+          
         </ul>
       </Nav>
       <ResponsiveNav state={navbarState} className={navbarState ? "show" : ""}>
@@ -83,7 +86,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#newsletter" onClick={() => setNavbarState(false)}>
-              Newsletter
+              Reserva
             </a>
           </li>
         </ul>

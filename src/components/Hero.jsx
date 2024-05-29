@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import hero from "../assets/hero.jpg";
 import heroDesign from "../assets/HeroDesign.png";
+import hero from "../assets/hero.jpg";
+
+
+
 export default function Hero() {
   return (
     <Section id="home">
