@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import heroDesign from "../assets/HeroDesign.png";
-import hero from "../assets/hero.jpg";
+import hero from "../assets/bg.png";
 
 
 
@@ -12,20 +11,22 @@ export default function Hero() {
         <img src={hero} alt="Background Image" />
       </div>
       <div className="content">
-        <div className="sale">
+
+        {/* <div className="sale">
           <img src={heroDesign} alt="" />
           <h1>
             BIG SALE
             <span>50% OFF</span>
           </h1>
-        </div>
+        </div> */}
+        
         <div className="info">
-          <h2>RETAILER</h2>
+          <h2>AUTS Restaurante & lanchonete</h2>
           <em>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            aspernatur itaque, eius quia voluptas numquam!
+          "Bem-vindo ao nosso restaurante, um espaço de acolhimento e inclusão, onde crianças
+           podem se divertir e desfrutar de refeições deliciosas com tranquilidade e segurança."
           </em>
-          <button>ORDER NOW</button>
+          <button><a href="#services">Conheça-nos</a></button>
         </div>
       </div>
     </Section>
@@ -92,7 +93,7 @@ const Section = styled.section`
         line-height: 2rem;
         letter-spacing: 0.1rem;
       }
-      button {
+      button > a {
         padding: 1rem 2rem;
         font-size: 1.4rem;
         background-color: #fc4958;
@@ -102,6 +103,7 @@ const Section = styled.section`
         letter-spacing: 0.2rem;
         transition: 0.3s ease-in-out;
         cursor: pointer;
+        text-decoration: none;
         &:hover {
           background-color: #f9c74f;
         }

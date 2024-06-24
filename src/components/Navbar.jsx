@@ -2,18 +2,24 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import styled from "styled-components";
-import foodYummy from "../assets/FoodYummy.png";
+import autsLogo from "../assets/logo.png";
+import './../index.css';
+
 
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   const html = document.querySelector("html");
   html.addEventListener("click", () => setNavbarState(false));
+
+  const handleClickReserva = () =>{
+    window.open('/reservas', '_blank');
+  }
   return (
     <>
       <Nav>
         <div className="brand">
 
-          <img src={foodYummy} alt="Icon" />
+          <img src={autsLogo} className="imagemBanner" alt="Icon" />
           
           <div className="toggle">
             
@@ -36,19 +42,25 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#services">Our Services</a>
+            <a href="#services">Quem Somos</a>
           </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
+          {/* <li>
+            <a href="#portfolio">Portifólio</a>
+          </li> */}
+          {/* <li>
             <a href="#testimonials">Testemunhos</a>
+          </li> */}
+          <li>
+            <a href="#products">Cardápio</a>
           </li>
           <li>
-            <a href="#products">Produtos</a>
+          <a href="#reserva">
+              Reserva
+            </a>
           </li>
+          
           <li>
-            <a href="#newsletter">Newsletter</a>
+            <a href="#footer">Contato</a>
           </li>
           
         </ul>
@@ -66,28 +78,22 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#services" onClick={() => setNavbarState(false)}>
-              Our Services
-            </a>
-          </li>
-          <li>
-            <a href="#portfolio" onClick={() => setNavbarState(false)}>
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a href="#testimonials" onClick={() => setNavbarState(false)}>
-              Testimonials
+            Quem Somos
             </a>
           </li>
           <li>
             <a href="#products" onClick={() => setNavbarState(false)}>
-              Products
+            Cardápio
             </a>
           </li>
           <li>
-            <a href="#newsletter" onClick={() => setNavbarState(false)}>
+            <a href="#reserva" onClick={() => setNavbarState(false)}>
               Reserva
             </a>
+          </li>
+
+          <li>
+            <a href="#footer" onClick={() => setNavbarState(false)}>Contato</a>
           </li>
         </ul>
       </ResponsiveNav>

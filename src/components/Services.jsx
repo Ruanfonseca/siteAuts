@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import Services1 from "../assets/Services1.png";
-import Services2 from "../assets/Services2.png";
-import Services3 from "../assets/Services3.png";
 import { TitleStyles } from "./ReusableStyles";
+
 export default function Services() {
   return (
     <Section id="services">
       <div className="title">
-        <h1 className="yellow">What we do?</h1>
+        <h1 className="yellow">Sobre o AUTS</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
-          incidunt magnam labore ipsam vero minima maxime doloribus dolores ipsa
-          soluta.
+        Localizado em Guaratiba/RJ, o AUTS Restaurante & Lanchonete vem trazendo um 
+        conceito diferente de atendimento ao público infantojuvenil. De forma inclusiva, 
+        atendemos crianças e jovens com necessidades especiais, proporcionando um ambiente acolhedor e adaptado para
+         garantir a melhor experiência possível. Nosso espaço é cuidadosamente projetado para ser acessível, 
+         com menu diversificado que atende a diversas restrições alimentares e preferências. Além disso, 
+         nossa equipe é treinada para oferecer um atendimento personalizado, respeitando e valorizando as individualidades de 
+         cada cliente. No AUTS, acreditamos que todos merecem um espaço onde possam desfrutar de momentos felizes e 
+        saborosos com suas famílias e amigos.
         </p>
       </div>
-      <div className="services">
+      {/* <div className="services">
         <div className="service">
           <img src={Services2} alt="" />
           <p>
@@ -40,7 +43,7 @@ export default function Services() {
           </p>
           <button>Read More</button>
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 }

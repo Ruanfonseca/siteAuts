@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-    BsFillEmojiFrownFill,
-    BsFillEmojiHeartEyesFill,
-    BsFillEmojiNeutralFill,
-    BsFillEmojiSmileFill
+  BsFillEmojiFrownFill,
+  BsFillEmojiHeartEyesFill,
+  BsFillEmojiNeutralFill,
+  BsFillEmojiSmileFill
 } from 'react-icons/bs';
 
 
@@ -62,7 +62,7 @@ const ReviewForm = ({data,updateFieldHandler}) => {
 
       <div className="form-control">
         <label htmlFor="comment">Comentário:</label>
-        <textarea name="comment" id="comment" placeholder='conte me como foi a sua experiencia com o produto' required
+        <textarea name="comment" id="comment" placeholder='conte me como foi a sua experiencia em nosso restaurante'
 
             checked={data.comment || ''}
 

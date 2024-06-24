@@ -1,19 +1,23 @@
 import React from "react";
-import styled from "styled-components";
-import logo from "../assets/FoodYummy.png";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
+import styled from "styled-components";
+import logo from "../assets/logo.png";
+
+
 export default function Footer() {
+
   return (
-    <div className="footer">
+    <div id="footer" className="footer">
       <Section>
         <div className="brand container">
           <img src={logo} alt="" />
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis,
-            repudiandae.
+            Respeito , acolhimento e inclusão.
+            <br/>
+            Visite nossas Redes Sociais
           </p>
           <ul>
             <li>
@@ -32,27 +36,25 @@ export default function Footer() {
         </div>
         <div className="about container">
           <div className="title">
-            <h3>About Us</h3>
+            <h3>Horário de Funcionamento</h3>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
-            eligendi repellat laudantium blanditiis iure nulla, ut aliquam
-            itaque unde nesciunt cum veritatis perferendis vel expedita! Nam
+          Segunda a quinta  7:00 às 20:00 
+          Sexta a domingo 07:00 às 01:00
           </p>
         </div>
         <div className="contact container">
           <div className="title">
-            <h3>Contact Us</h3>
+            <h3>Contato</h3>
           </div>
-          <p>+91 1231231231</p>
-          <p>foodyummy@gmail.com</p>
-          <p>@foodyummy</p>
-          <p>412 Street, Ground Floor, India</p>
+          <p>Telefone +55 21 97065-7441</p>
+          <p>Email Inclusão@autsrestaurante.com.br</p>
+          <p>Endereço: Rua passagem Franca S/n - Lote 3 Guaratiba</p>
         </div>
       </Section>
       <LowerFooter className="lower__footer">
         <h2>
-          Copyright &copy; 2021 <span>Food Yummy</span>
+          Copyright &copy; 2024 <span>AUTS Restaurante & Lanchonete</span>
         </h2>
       </LowerFooter>
     </div>
@@ -118,7 +120,7 @@ const Section = styled.footer`
     .container {
       img {
         height: 4rem;
-        width: 10rem;
+        width: 5rem;
       }
     }
   }

@@ -2,24 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { TitleStyles } from "./ReusableStyles";
 
-export default function Newsletter() {
-  
+
+export default function Testimonials() {
   const handleClickReserva = () =>{
-    window.open('/avaliation', '_blank');
+    window.open('/reservas', '_blank');
   }
 
   return (
-    <Section id="newsletter">
+    <Section id="reserva">
       <div className="title">
         <h1>
-          <span>Avaliação</span>
+          <span>Política de Reservas</span>
         </h1>
         <p>
-          Se você já nos visitou e deseja avaliar nosso atendimento , clique no botão abaixo ! 
+        As Reservas serão feitas somente de segunda até quinta 08:00 às 17:00, 
+        serão mantidas até 10 minutos após o horário reservado e validadas
+        somente em nome do responsável pelo contato,
+        necessário levar documento de identificação com foto.
+        Em caso se lotação do espaço o cliente será avisado sobre a lista de espera.
+        Em caso de aniversário, reservar com antecedência informando o motivo da reserva.
         </p>
       </div>
       <div className="container">
-        <button onClick={handleClickReserva}>Avaliar</button>
+        <button onClick={handleClickReserva}>Faça Aqui sua Reserva !</button>
       </div>
     </Section>
   );
@@ -80,3 +85,4 @@ const Section = styled.section`
     }
   }
 `;
+

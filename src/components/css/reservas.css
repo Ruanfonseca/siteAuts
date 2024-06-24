@@ -1,0 +1,62 @@
+.background-image {
+    position: relative;
+    background-image: url('../../assets/bg.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Para criar o efeito de paralaxe */
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade do filtro escuro */
+}
+
+.containerReserva {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container-reserva {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333; /* Cor do texto do formulário */
+    z-index: 2; /* Garante que o formulário esteja sobre o fundo escuro */
+}
+
+.tituloReserva {
+    position: absolute;
+    top: 50px; /* Ajuste conforme necessário */
+    text-align: center;
+    color: #ffffff; /* Cor do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
+    z-index: 2; /* Coloca o título acima do fundo escuro */
+}
+.buttonReserva{
+    background-color: #2196F3;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+.buttonReserva:hover{
+    background-color: #4CAF50;
+}
