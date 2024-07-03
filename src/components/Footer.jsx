@@ -40,6 +40,7 @@ export default function Footer() {
           </div>
           <p>
           Segunda a Quinta  7:00 às 20:00 
+          <br/>
           Sexta a Domingo 07:00 às 01:00
           </p>
         </div>
