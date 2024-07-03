@@ -10,9 +10,9 @@ export default function Portfolio() {
       <div className="content">
         <h1>Seu filho tem seletividade alimentar?</h1>
         <h2>
-         Aqui ele pode escolher o próprio prato ou montar seu própio prato
+         Aqui ele pode escolher o próprio prato ou montar o seu 
         </h2>
-        <button>Ver mais</button>
+        <a href="#products">Ver Cardápio</a>
       </div>
     </Section>
   );
@@ -74,6 +74,21 @@ const Section = styled.section`
         background: linear-gradient(to right, #e85d04, #fc4958);
       }
     }
+      a {
+      border: none;
+      padding: 1rem 4rem;
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+      border-radius: 4rem;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+      background: linear-gradient(to right, #fc4958, #e85d04);
+      text-transform: uppercase;
+      &:hover {
+        background: linear-gradient(to right, #e85d04, #fc4958);
+      }
+    }
   }
   @media screen and (min-width: 260px) and (max-width: 1080px) {
     /* display: none; */
@@ -87,6 +102,10 @@ const Section = styled.section`
         width: 90%;
       }
       button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+      a {
         padding: 1rem 2rem;
         font-size: 1rem;
       }

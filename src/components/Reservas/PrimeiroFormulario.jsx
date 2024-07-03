@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import InputMask from 'react-input-mask';
 import '../../components/css/reservas.css';
 
 const FormEtapa1 = ({ valores, handleChange, proximaEtapa }) => {
@@ -11,27 +12,39 @@ const FormEtapa1 = ({ valores, handleChange, proximaEtapa }) => {
   };
 
   return (
-    <Form>
-      <Form.Group controlId="nomeResponsavel">
+    <Form className="form-reserva">
+      <Form.Group controlId="nomeResponsavel" className="mb-3">
         <Form.Label>Nome do Responsável</Form.Label>
         <Form.Control
           type="text"
           value={nomeResponsavel}
           onChange={handleChange}
+          placeholder="Digite o nome do responsável"
         />
       </Form.Group>
 
-      <Form.Group controlId="email">
+      <Form.Group controlId="email" className="mb-3">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="email" value={email} onChange={handleChange} />
+        <Form.Control
+          type="email"
+          value={email}
+          onChange={handleChange}
+          placeholder="Digite o seu email"
+        />
       </Form.Group>
 
-      <Form.Group controlId="telefone">
+      <Form.Group controlId="telefone" className="mb-3">
         <Form.Label>Telefone</Form.Label>
-        <Form.Control type="tel" value={telefone} onChange={handleChange} />
+        <InputMask
+          mask="(99) 99999-9999"
+          value={telefone}
+          onChange={handleChange}
+        >
+          {(inputProps) => <Form.Control {...inputProps} type="tel" placeholder="Digite o seu telefone" />}
+        </InputMask>
       </Form.Group>
 
-      <Button variant="primary" className='buttonReserva' onClick={handleProximo}>
+      <Button variant="primary" className="button-reserva" onClick={handleProximo}>
         Próximo
       </Button>
     </Form>

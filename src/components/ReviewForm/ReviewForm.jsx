@@ -9,68 +9,68 @@ import {
 
 import './ReviewForm.css';
 
-const ReviewForm = ({data,updateFieldHandler}) => {
+const ReviewForm = ({data, updateFieldHandler}) => {
   return (
     <div className='review-form'>
       <div className="form-control score-container">
 
-          <label className='radio-container'>
-            
-            <input type="radio"
-             value="neutral" 
-             name="review"
-             checked={data.review==="neutral"}
-             onChange={(e)=>updateFieldHandler("review",e.target.value)}
-             required />
-            
-            <BsFillEmojiNeutralFill/>
-            <p>Poderia ser Melhor</p>
-          </label>
+        <label className='radio-container'>
+          <input type="radio"
+            value="neutro" 
+            name="sentimento"
+            checked={data.sentimento === "neutro"}
+            onChange={(e) => updateFieldHandler("sentimento", e.target.value)}
+            required />
+          <BsFillEmojiNeutralFill/>
+          <p>Poderia ser Melhor</p>
+        </label>
         
-            <label className='radio-container'>
-            <input type="radio"
-             value="satisfied"
-              name="review"
-               required
-               checked={data.review==="satisfied"}
-             onChange={(e)=>updateFieldHandler("review",e.target.value)}
-               />
-
-            <BsFillEmojiSmileFill/>
-            <p>Satisfeito</p>
-          </label>
-          
-          <label className='radio-container'>
-            <input type="radio" value="very_satisfied" name="review" required
-            checked={data.review==="very_satisfied"}
-            onChange={(e)=>updateFieldHandler("review",e.target.value)}
-            />
-            <BsFillEmojiHeartEyesFill/>
-            <p>Muito Satisfeito</p>
-          </label>
+        <label className='radio-container'>
+          <input type="radio"
+            value="satisfeito"
+            name="sentimento"
+            checked={data.sentimento === "satisfeito"}
+            onChange={(e) => updateFieldHandler("sentimento", e.target.value)}
+            required />
+          <BsFillEmojiSmileFill/>
+          <p>Satisfeito</p>
+        </label>
         
-            <label className='radio-container'>
-            <input type="radio" value="unsatisfied" name="review" required 
-            checked={data.review==="unsatisfied"}
-            onChange={(e)=>updateFieldHandler("review",e.target.value)}
-            />
-            <BsFillEmojiFrownFill/>
-            <p>Insatisfeito</p>
-          </label>
+        <label className='radio-container'>
+          <input type="radio"
+            value="Muito_Satisfeito"
+            name="sentimento"
+            checked={data.sentimento === "Muito_Satisfeito"}
+            onChange={(e) => updateFieldHandler("sentimento", e.target.value)}
+            required />
+          <BsFillEmojiHeartEyesFill/>
+          <p>Muito Satisfeito</p>
+        </label>
+        
+        <label className='radio-container'>
+          <input type="radio"
+            value="insatisfeito"
+            name="sentimento"
+            checked={data.sentimento === "insatisfeito"}
+            onChange={(e) => updateFieldHandler("sentimento", e.target.value)}
+            required />
+          <BsFillEmojiFrownFill/>
+          <p>Insatisfeito</p>
+        </label>
       </div>
 
-
       <div className="form-control">
-        <label htmlFor="comment">Comentário:</label>
-        <textarea name="comment" id="comment" placeholder='conte me como foi a sua experiencia em nosso restaurante'
-
-            checked={data.comment || ''}
-
-            onChange={(e)=>updateFieldHandler("comment",e.target.value)}
+        <label htmlFor="comentario">Comentário:</label>
+        <textarea 
+          name="comentario" 
+          id="comentario" 
+          placeholder='conte me como foi a sua experiencia em nosso restaurante'
+          value={data.comentario || ''}
+          onChange={(e) => updateFieldHandler("comentario", e.target.value)}
         ></textarea>
       </div>
     </div>
-  )
+  );
 }
 
-export default ReviewForm
+export default ReviewForm;;

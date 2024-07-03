@@ -43,7 +43,8 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
     z-index: 2; /* Coloca o título acima do fundo escuro */
 }
-.buttonReserva{
+
+.buttonReserva {
     background-color: #2196F3;
     border: none;
     color: #fff;
@@ -57,6 +58,38 @@
     border-radius: 8px;
     transition: background-color 0.5s ease;
 }
-.buttonReserva:hover{
+
+.buttonReserva:hover {
     background-color: #4CAF50;
+}
+
+.form-reserva {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-reserva .form-label {
+  font-weight: bold;
+}
+
+.form-reserva .form-control {
+  border-radius: 5px;
+}
+
+.form-reserva .button-reserva {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.form-reserva .button-reserva:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }

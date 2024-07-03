@@ -9,31 +9,31 @@ export default function Products() {
   const data = [
     {
       image: product1,
-      name: "Chicken Burger",
-      price: "$22.4/pcs",
+      name: "Intolerâncias",
+      price: "Glúten e Lactose",
     },
     {
       image: product2,
-      name: "Toasted Bread",
-      price: "$5.5/pcs",
+      name: "Diabéticos",
+      price: "",
     },
     {
       image: product3,
-      name: "Egg Sandwich",
-      price: "$8/pcs",
+      name: "Café da Manhã",
+      price: "",
     },
 
     {
       image: product4,
-      name: "Raspberry Cake",
-      price: "$12.5/pcs",
+      name: "Petiscos",
+      price: "",
     },
   ];
   return (
     <Section id="products">
       <div className="title">
         <h1>
-          <span>Favourite</span> All the time!
+          <span>Nosso Cardápio</span>
         </h1>
       </div>
       <div className="products">
@@ -46,7 +46,7 @@ export default function Products() {
               <h2>{product.name}</h2>
               <h3>{product.price}</h3>
               <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
-              <button>Buy Now</button>
+              <button>Ver Mais</button>
             </div>
           );
         })}

@@ -10,10 +10,10 @@ import Steps from './steps/Steps';
 
 
 const formTemplate={
-  name:"",
+  nome:"",
   email:"",
-  review:"",
-  comment:"",
+  sentimento:"",
+  comentario:"",
  };
  
  function Avaliation() {
@@ -33,6 +33,18 @@ const formTemplate={
  
   const{currentStep,currentComponent,changeStep,isLastStep,isFirstStep} = useForm(formComponents);
   
+  const handleEnvio =() =>{
+    const mensagem = 
+    `Olá , meu nome é ${data.nome} ,meu email ${data.email} ,
+     estive no seu restaurante e me senti ${data.sentimento} ,
+     meu comentário sobre a experiência é ${data.comentario}.
+    `;
+    const phoneNumber = '21969232991';
+    const messageText = encodeURIComponent(mensagem);
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`;
+    // Abrir o link no navegador
+    window.open(whatsappLink, '_blank');
+  }
  
   return (
    
@@ -64,7 +76,7 @@ const formTemplate={
                            <GrFormNext/></button>
                            
                            ):(
-                           <button type='button'>
+                           <button onClick={handleEnvio} type='button'>
                            <span>Enviar</span>
                            <FiSend/>
                          </button>

@@ -32,7 +32,7 @@ function Reservas() {
 
   const enviarReserva = async () => {
     const mensagem = `Olá ,
-      Meu nome: ${valores.nomeResponsavel},
+      Sou: ${valores.nomeResponsavel},
       Meu Email: ${valores.email},
       Meu Telefone: ${valores.telefone},
       Data da Reserva: ${valores.dataReserva},
@@ -41,8 +41,7 @@ function Reservas() {
       Termos Aceitos: ${valores.termosAceitos === 'Aceito' ? 'Aceito' : 'Não Aceito'}
     `;
     
-    // Montar o link para enviar via WhatsApp
-    const phoneNumber = '21969232991'; // Número no formato internacional
+    const phoneNumber = '21970657441';
     const messageText = encodeURIComponent(mensagem);
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`;
 
