@@ -9,19 +9,21 @@ export default function Newsletter() {
   }
 
   return (
-    <Section id="newsletter">
-      <div className="title">
-        <h1>
-          <span>Avaliação</span>
-        </h1>
-        <p>
-          Se você já nos visitou e deseja avaliar nosso atendimento , clique no botão abaixo ! 
-        </p>
-      </div>
-      <div className="container">
-        <button onClick={handleClickReserva}>Avaliar</button>
-      </div>
-    </Section>
+    <>
+      <Section id="newsletter">
+        <div className="title">
+          <h1>
+            <span>Avaliação</span>
+          </h1>
+          <p>
+            Se você já nos visitou e deseja avaliar nosso atendimento, clique no botão abaixo!
+          </p>
+        </div>
+        <div className="container">
+          <button onClick={handleClickReserva}>Avaliar</button>
+        </div>
+      </Section>
+    </>
   );
 }
 
@@ -33,17 +35,16 @@ const Section = styled.section`
   gap: 2rem;
   align-items: center;
   ${TitleStyles};
+
+  .title {
+    text-align: center;
+  }
+
   .container {
     background: linear-gradient(to right, #fc4958, #e85d04, #fc4958);
     padding: 0.3vw;
-    input {
-      border: none;
-      padding: 1.5rem 8rem 1.5rem 1rem;
-      font-size: 1.3rem;
-      &:focus {
-        outline: none;
-      }
-    }
+    display: flex; /* Adicionado */
+    justify-content: center; /* Adicionado */
     button {
       padding: 1rem 5rem;
       background-color: transparent;
@@ -60,18 +61,14 @@ const Section = styled.section`
       }
     }
   }
+
   @media screen and (min-width: 260px) and (max-width: 1080px) {
     .container {
       padding: 0.8rem;
       border-radius: 0.5rem;
-      input {
-        width: 75vw;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-      }
       button {
         margin-top: 0.5rem;
-        width: 100%;
+        width: auto; /* Ajustado */
         padding: 0.5rem;
         &:hover {
           padding: 0.5rem 1rem;

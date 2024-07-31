@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Col, Container } from 'react-bootstrap';
 import '../css/reservas.css';
 import FormEtapa1 from './PrimeiroFormulario';
 import FormEtapa2 from './SegundoFormulario';
@@ -6,7 +7,6 @@ import FormEtapa3 from './TerceiroFormulario';
 
 function Reservas() {
   const [etapa, setEtapa] = useState(1);
-
   const [valores, setValores] = useState({
     nomeResponsavel: '',
     email: '',
@@ -38,7 +38,7 @@ function Reservas() {
       Data da Reserva: ${valores.dataReserva},
       Hora da Reserva: ${valores.horaReserva},
       Motivo da Reserva: ${valores.motivoReserva},
-      Termos Aceitos: ${valores.termosAceitos === 'Aceito' ? 'Aceito' : 'Não Aceito'}
+      Termos Aceitos: ${valores.termosAceitos ? 'Aceito' : 'Não Aceito'}
     `;
     
     const phoneNumber = '21970657441';
@@ -105,17 +105,18 @@ function Reservas() {
 
   return (
     <>
-      <div className="background-image">
-        <div className="overlay"></div>
-        <div className="containerReserva">
-          <h1 className="tituloReserva">Formulário de Reserva</h1>
-          <div className="form-container-reserva">
+    <Container fluid className="p-0">
+      <div className="min-vh-100 background-image" >
+        <Col xs={12} className="d-flex align-items-center justify-content-center">
+          <div className="p-4 bg-white rounded shadow-sm">
+            <h1 className="mb-4">Formulário de Reserva</h1>
             {formComponent}
           </div>
-        </div>
+        </Col>
       </div>
-    </>
-  );
+    </Container>
+    </> 
+   );
 }
 
 export default Reservas;

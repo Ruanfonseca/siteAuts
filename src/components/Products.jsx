@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from 'react-bootstrap';
 import styled from "styled-components";
 import product1 from "../assets/product1.jpg";
 import product2 from "../assets/product2.jpg";
 import product3 from "../assets/product3.jpg";
 import product4 from "../assets/product4.jpg";
+import ProductModal from '../modals/ProductModal/ProductModal';
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+
 export default function Products() {
+  const [showModal, setShowModal] = useState(Array(4).fill(false));
+
+  const handleShow = (index) => {
+    const newShowModal = [...showModal];
+    newShowModal[index] = true;
+    setShowModal(newShowModal);
+  };
+
+  const handleClose = (index) => {
+    const newShowModal = [...showModal];
+    newShowModal[index] = false;
+    setShowModal(newShowModal);
+  };
+
   const data = [
     {
       image: product1,
@@ -22,13 +39,13 @@ export default function Products() {
       name: "Café da Manhã",
       price: "",
     },
-
     {
       image: product4,
       name: "Petiscos",
       price: "",
     },
   ];
+
   return (
     <Section id="products">
       <div className="title">
@@ -37,19 +54,23 @@ export default function Products() {
         </h1>
       </div>
       <div className="products">
-        {data.map((product) => {
-          return (
-            <div className="product">
-              <div className="image">
-                <img src={product.image} alt="" />
-              </div>
-              <h2>{product.name}</h2>
-              <h3>{product.price}</h3>
-              <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
-              <button>Ver Mais</button>
+        {data.map((product, index) => (
+          <div className="product" key={index}>
+            <div className="image">
+              <img src={product.image} alt="" />
             </div>
-          );
-        })}
+            <h2>{product.name}</h2>
+            <h3>{product.price}</h3>
+            <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
+            <Button onClick={() => handleShow(index)}>Ver Mais</Button>
+
+            <ProductModal
+              show={showModal[index]}
+              onHide={() => handleClose(index)}
+              product={product}
+            />
+          </div>
+        ))}
       </div>
     </Section>
   );
