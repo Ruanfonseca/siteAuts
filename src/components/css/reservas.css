@@ -1,73 +1,69 @@
 .background-image {
-    
-    background-image: url('../../assets/bg.png'); /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Para criar o efeito de paralaxe */
-    height: 100vh;
+  position: relative;
+  background-image: url('../../assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade do filtro escuro */
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
-.containerReserva {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.form-container-reserva {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #333; /* Cor do texto do formulário */
-    z-index: 2; /* Garante que o formulário esteja sobre o fundo escuro */
+.form-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff; /* Fundo branco para o formulário */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  z-index: 3;
 }
 
 .tituloReserva {
-    position: absolute;
-    top: 50px; /* Ajuste conforme necessário */
-    text-align: center;
-    color: #ffffff; /* Cor do texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
-    z-index: 2; /* Coloca o título acima do fundo escuro */
+  text-align: center;
+  color: #333; /* Cor do título alterada para melhorar a visibilidade */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra mais sutil */
 }
 
 .buttonReserva {
-    background-color: #2196F3;
-    border: none;
-    color: #fff;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.5s ease;
+  background-color: #2196F3;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.5s ease;
 }
 
 .buttonReserva:hover {
-    background-color: #4CAF50;
+  background-color: #4CAF50;
 }
 
 .form-reserva {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #ffffff; /* Fundo branco para o formulário */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -92,4 +88,37 @@
 .form-reserva .button-reserva:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .tituloReserva {
+    font-size: 1.5rem;
+  }
+
+  .form-reserva {
+    padding: 15px;
+  }
+
+  .form-reserva .button-reserva {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-reserva {
+    padding: 10px;
+  }
+
+  .form-reserva .button-reserva {
+    font-size: 14px;
+    padding: 8px;
+  }
 }

@@ -45,10 +45,8 @@ function Reservas() {
     const messageText = encodeURIComponent(mensagem);
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`;
 
-    // Abrir o link no navegador
     window.open(whatsappLink, '_blank');
 
-    // Reiniciar os valores do formulário e a etapa
     setValores({
       nomeResponsavel: '',
       email: '',
@@ -104,19 +102,17 @@ function Reservas() {
   }
 
   return (
-    <>
     <Container fluid className="p-0">
-      <div className="min-vh-100 background-image" >
+      <div className="min-vh-100 background-image">
         <Col xs={12} className="d-flex align-items-center justify-content-center">
-          <div className="p-4 bg-white rounded shadow-sm">
-            <h1 className="mb-4">Formulário de Reserva</h1>
+          <div className="form-container">
+            <h1 className="mb-4 tituloReserva">Formulário de Reserva</h1>
             {formComponent}
           </div>
         </Col>
       </div>
     </Container>
-    </> 
-   );
+  );
 }
 
 export default Reservas;

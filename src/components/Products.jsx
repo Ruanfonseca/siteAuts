@@ -1,48 +1,66 @@
 import React, { useState } from "react";
 import { Button } from 'react-bootstrap';
 import styled from "styled-components";
-import product1 from "../assets/product1.jpg";
-import product2 from "../assets/product2.jpg";
-import product3 from "../assets/product3.jpg";
-import product4 from "../assets/product4.jpg";
-import ProductModal from '../modals/ProductModal/ProductModal';
+import product3 from "../assets/cafedamanha.jpg";
+import product2 from "../assets/diabetico.jpg";
+import product1 from "../assets/intolerante.jpg";
+import product4 from "../assets/petiscos.jpg";
+import CafeDaManhaModal from '../modals/ProductModal/cafedamanha/cafedamanha';
+import DiabeticosModal from '../modals/ProductModal/diabeticos/diabeticos';
+import IntoleranciasModal from '../modals/ProductModal/intolerancia/intolerancia';
+import PetiscosModal from '../modals/ProductModal/petiscos/petiscos';
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 
 export default function Products() {
-  const [showModal, setShowModal] = useState(Array(4).fill(false));
+  const [showModals, setShowModals] = useState({
+    intolerancias: false,
+    diabeticos: false,
+    cafeDaManha: false,
+    petiscos: false,
+  });
 
-  const handleShow = (index) => {
-    const newShowModal = [...showModal];
-    newShowModal[index] = true;
-    setShowModal(newShowModal);
+  const handleShow = (modalName) => {
+    setShowModals((prevState) => ({
+      ...prevState,
+      [modalName]: true,
+    }));
   };
 
-  const handleClose = (index) => {
-    const newShowModal = [...showModal];
-    newShowModal[index] = false;
-    setShowModal(newShowModal);
+  const handleClose = (modalName) => {
+    setShowModals((prevState) => ({
+      ...prevState,
+      [modalName]: false,
+    }));
   };
 
   const data = [
     {
       image: product1,
       name: "Intolerâncias",
-      price: "Glúten e Lactose",
+      description: "Opções deliciosas sem glúten e lactose, preparadas para quem tem intolerâncias alimentares.",
+      modal: "intolerancias",
+      Component: IntoleranciasModal
     },
     {
       image: product2,
       name: "Diabéticos",
-      price: "",
+      description: "Pratos especialmente desenvolvidos para quem precisa controlar o açúcar no sangue, sem abrir mão do sabor.",
+      modal: "diabeticos",
+      Component: DiabeticosModal
     },
     {
       image: product3,
       name: "Café da Manhã",
-      price: "",
+      description: "Comece o dia com nossas opções variadas de café da manhã, de pães a frutas frescas e sucos.",
+      modal: "cafeDaManha",
+      Component: CafeDaManhaModal
     },
     {
       image: product4,
       name: "Petiscos",
-      price: "",
+      description: "Petiscos variados para compartilhar, perfeitos para acompanhar uma boa conversa.",
+      modal: "petiscos",
+      Component: PetiscosModal
     },
   ];
 
@@ -54,23 +72,26 @@ export default function Products() {
         </h1>
       </div>
       <div className="products">
-        {data.map((product, index) => (
-          <div className="product" key={index}>
-            <div className="image">
-              <img src={product.image} alt="" />
-            </div>
-            <h2>{product.name}</h2>
-            <h3>{product.price}</h3>
-            <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
-            <Button onClick={() => handleShow(index)}>Ver Mais</Button>
+        {data.map((product, index) => {
+          const { Component, modal } = product;
+          return (
+            <div className="product" key={index}>
+              <div className="image">
+                <img src={product.image} alt="" />
+              </div>
+              <h2>{product.name}</h2>
+              <h3>{product.description}</h3>
+              <p>Explore nossas opções deliciosas e adequadas às suas necessidades.</p>
+              <Button onClick={() => handleShow(modal)}>Ver Mais</Button>
 
-            <ProductModal
-              show={showModal[index]}
-              onHide={() => handleClose(index)}
-              product={product}
-            />
-          </div>
-        ))}
+              <Component
+                show={showModals[modal]}
+                onHide={() => handleClose(modal)}
+                product={product}
+              />
+            </div>
+          );
+        })}
       </div>
     </Section>
   );
@@ -91,6 +112,7 @@ const Section = styled.section`
       align-items: center;
       h3 {
         color: #fc4958;
+        text-align: center;
       }
       p {
         text-align: center;

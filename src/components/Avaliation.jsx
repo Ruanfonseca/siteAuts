@@ -39,7 +39,7 @@ const formTemplate={
      estive no seu restaurante e me senti ${data.sentimento} ,
      meu comentário sobre a experiência é ${data.comentario}.
     `;
-    const phoneNumber = '21969232991';
+    const phoneNumber = '21970657441';
     const messageText = encodeURIComponent(mensagem);
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`;
     // Abrir o link no navegador
@@ -48,7 +48,7 @@ const formTemplate={
  
   return (
    
-       <div className='app'>
+       <div className='app background-image-avaliation'>
          <div className="header">
            <h2>Deixe sua avaliação</h2>
            <p>Ficamos felizes com a sua presença,utilize o formulario abaixo para avaliar o nosso atendimento</p>

@@ -8,8 +8,37 @@
 .header h2{
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: white;
 }
-
+.header p{
+    color: white;
+}
+.background-image-avaliation {
+    position: relative;
+    background-image: url('../../assets/bg.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Para criar o efeito de paralaxe */
+    height: 100vh;
+    z-index: 1; /* Certifique-se de que o conteúdo sobreposto fique acima */
+  }
+  
+  .background-image-avaliation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: 2; /* Camada acima da imagem de fundo, mas abaixo do conteúdo */
+  }
+  
+  /* Se houver conteúdo dentro dessa seção, certifique-se de que esteja acima da sobreposição */
+  .background-image-avaliation > * {
+    position: relative;
+    z-index: 3;
+  }
 .form-container{
     max-width: 600px;
     margin:0 auto;

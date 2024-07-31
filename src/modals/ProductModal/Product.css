@@ -1,87 +1,144 @@
-/* ProductModal.css */
+/* Estilos gerais para os modals */
+.modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-/* Estilos gerais para o modal */
-.modal-body-custom {
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
   text-align: center;
-  padding: 1rem;
+  margin: 0;
+  padding: 15px;
 }
 
-.modal-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin: 0 auto;
+.modal-body {
+  padding: 20px;
 }
 
-.modal-text {
-  margin-top: 1rem;
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #dee2e6;
+  padding: 15px;
+}
+
+.modal .btn {
+  background-color: #fc4958;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-transform: uppercase;
   font-size: 1rem;
 }
 
-/* Estilos para telas de desktop */
-@media (min-width: 1025px) {
+.modal .btn:hover {
+  background-color: #e85d04;
+}
+
+/* Imagem de título no modal */
+.modal-title img {
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Estilos responsivos */
+
+/* Celulares */
+@media (max-width: 576px) {
+  .modal-content {
+    margin: 10px;
+  }
+
   .modal-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
-  .modal-text {
-    font-size: 1.1rem;
+  .modal-body {
+    padding: 15px;
   }
 
-  .modal-footer button {
-    width: auto;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+  .modal-footer {
+    padding: 10px;
+  }
+
+  .modal .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .modal-title img {
+    width: 50px;
+    height: 50px;
   }
 }
 
-/* Estilos para telas de tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .modal-title {
-    font-size: 1.75rem;
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .modal-content {
+    margin: 20px;
   }
 
-  .modal-text {
-    font-size: 1rem;
-  }
-
-  .modal-footer button {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-  }
-}
-
-/* Estilos para telas de celular */
-@media (max-width: 767px) {
   .modal-title {
     font-size: 1.5rem;
   }
 
-  .modal-text {
-    font-size: 0.9rem;
+  .modal-body {
+    padding: 20px;
   }
 
-  .modal-footer button {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.9rem;
+  .modal-footer {
+    padding: 15px;
+  }
+
+  .modal .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .modal-title img {
+    width: 60px;
+    height: 60px;
   }
 }
 
-/* Estilos para telas muito pequenas */
-@media (max-width: 576px) {
+/* Desktops */
+@media (min-width: 769px) {
+  .modal-content {
+    max-width: 700px;
+    margin: auto;
+  }
+
   .modal-title {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
   }
 
-  .modal-text {
-    font-size: 0.8rem;
+  .modal-body {
+    padding: 25px;
   }
 
-  .modal-footer button {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 0.8rem;
+  .modal-footer {
+    padding: 20px;
+  }
+
+  .modal .btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+
+  .modal-title img {
+    width: 70px;
+    height: 70px;
   }
 }
