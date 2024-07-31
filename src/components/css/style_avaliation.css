@@ -20,7 +20,7 @@
     background-position: center;
     background-attachment: fixed; /* Para criar o efeito de paralaxe */
     height: 100vh;
-    z-index: 1; /* Certifique-se de que o conteúdo sobreposto fique acima */
+    z-index: 1; 
   }
   
   .background-image-avaliation::before {
