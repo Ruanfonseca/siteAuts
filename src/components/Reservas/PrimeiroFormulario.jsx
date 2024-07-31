@@ -19,7 +19,7 @@ const FormEtapa1 = ({ valores, handleChange, proximaEtapa }) => {
           type="text"
           value={nomeResponsavel}
           onChange={handleChange}
-          placeholder="Digite o nome do responsável"
+          placeholder="Nome"
         />
       </Form.Group>
 
@@ -29,7 +29,7 @@ const FormEtapa1 = ({ valores, handleChange, proximaEtapa }) => {
           type="email"
           value={email}
           onChange={handleChange}
-          placeholder="Digite o seu email"
+          placeholder="Email"
         />
       </Form.Group>
 
@@ -40,7 +40,7 @@ const FormEtapa1 = ({ valores, handleChange, proximaEtapa }) => {
           value={telefone}
           onChange={handleChange}
         >
-          {(inputProps) => <Form.Control {...inputProps} type="tel" placeholder="Digite o seu telefone" />}
+          {(inputProps) => <Form.Control {...inputProps} type="tel" placeholder="Telefone" />}
         </InputMask>
       </Form.Group>
 

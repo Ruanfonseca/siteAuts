@@ -26,7 +26,7 @@ export default function Hero() {
           "Bem-vindo ao nosso restaurante, um espaço de acolhimento e inclusão, onde crianças
            podem se divertir e desfrutar de refeições deliciosas com tranquilidade e segurança."
           </em>
-          <button><a href="#services">Conheça-nos</a></button>
+          <a href="#services">Conheça-nos</a>
         </div>
       </div>
     </Section>
@@ -93,7 +93,7 @@ const Section = styled.section`
         line-height: 2rem;
         letter-spacing: 0.1rem;
       }
-      button > a {
+       a {
         padding: 1rem 2rem;
         font-size: 1.4rem;
         background-color: #fc4958;
@@ -104,6 +104,7 @@ const Section = styled.section`
         transition: 0.3s ease-in-out;
         cursor: pointer;
         text-decoration: none;
+        border-radius:10%;
         &:hover {
           background-color: #f9c74f;
         }

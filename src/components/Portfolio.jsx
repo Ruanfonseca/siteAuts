@@ -55,6 +55,7 @@ const Section = styled.section`
     align-items: flex-start;
     h1 {
       font-size: 3rem;
+      padding-top:5px;
       width: 60%;
     }
     h2 {
