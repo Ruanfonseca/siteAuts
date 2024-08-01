@@ -10,7 +10,7 @@ export default function Portfolio() {
       </div>
       <div className="content">
         <h1>Seu filho tem seletividade alimentar?</h1>
-        <h2>Aqui ele pode escolher o próprio prato ou montar o seu</h2>
+        <h2>Aqui ele pode montar o próprio prato dentro das nossas opções</h2>
         <a href="#products">Ver Cardápio</a>
       </div>
     </Section>

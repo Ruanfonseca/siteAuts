@@ -1,27 +1,26 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import styled from 'styled-components';
-import petiscosImage from '../../../assets/petiscos.jpg'; // Certifique-se de ter a imagem no caminho correto
+import sobremesas from '../../../assets/sobremesas.jpg';
 import '../Product.css';
-function PetiscosModal({ show, onHide, product }) {
+
+
+function SobremesasModal({ show, onHide, product }) {
   return (
     <StyledModal show={show} onHide={onHide} centered>
       <Modal.Header closeButton>
         <Modal.Title>
           <div className="title-container">
-            <img src={petiscosImage} alt="Petiscos" className="title-image" />
-            <span>Cardápio de Petiscos</span>
+            <img src={sobremesas} alt="Sobremesas" className="title-image" />
+            <span>Cardapio Sobremesas</span>
           </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <ul>
-          <li>Dadinho de tapioca TEA (6 unidades) - R$ 35,00</li>
-          <li>Couve Terapêutica crocante - R$ 25,00</li>
-          <li>Camarão Inclusão ao Alho e Óleo - R$ 55,00</li>
-          <li>Batata auts média - R$ 35,00 / grande - R$ 45,00 (cheddar, bacon, maionese da casa e maionese zero lactose)</li>
-          <li>Tulipa crocante atípica - R$ 55,00</li>
-          <li>Tábua da diversidade (sardinha, trilha, camarão e batata frita) - R$ 70,00</li>
+          <li>Quindim, sem gluten e sem lactose(leite de coco)</li>
+          <li>Pudim zero lactose </li>
+          <li>Surpresa de banana,(creme feito com leite vegetal e Amido)</li>
         </ul>
       </Modal.Body>
       <Modal.Footer>
@@ -66,4 +65,4 @@ const StyledModal = styled(Modal)`
   }
 `;
 
-export default PetiscosModal;
+export default SobremesasModal;

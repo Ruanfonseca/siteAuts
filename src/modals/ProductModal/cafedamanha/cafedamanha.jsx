@@ -10,34 +10,34 @@ function CafeDaManhaModal({ show, onHide, product }) {
         <Modal.Title>
           <div className="title-container">
             <img src={cafeDaManhaImage} alt="Café da Manhã" className="title-image" />
-            <span>{product.name}</span>
+            <span>Cardápio de Café da Manhã</span>
           </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <ul>
-          <li>bolo Fatia - R$ 6,50</li>
-          <li>bolo sem lactose - R$ 8,00</li>
-          <li>bolo sem gluten - R$ 8,00</li>
-          <li>bolo diet - R$ 8,00</li>
-          <li>pão na chapa - R$ 4,50</li>
-          <li>pão com ovo - R$ 6,00</li>
-          <li>pão com ovo e queijo - R$ 9,00</li>
-          <li>pão com ovo e queijo e presunto - R$ 10,00</li>
-          <li>ovos mexido - R$ 3,50</li>
-          <li>misto quente - R$ 7,00</li>
-          <li>queijo quente - R$ 7,00</li>
-          <li>tapioca - R$ 9,00</li>
-          <li>crepioca - R$ 9,00</li>
-          <li>omelete - R$ 9,00</li>
-          <li>salada de fruta - R$ 10,00</li>
+          <li>Bolo Fatia - R$ 6,50</li>
+          <li>Bolo sem lactose - R$ 8,00</li>
+          <li>Bolo sem gluten - R$ 8,00</li>
+          <li>Bolo diet - R$ 8,00</li>
+          <li>Pão na chapa - R$ 4,50</li>
+          <li>Pão com ovo - R$ 6,00</li>
+          <li>Pão com ovo e queijo - R$ 9,00</li>
+          <li>Pão com ovo e queijo e presunto - R$ 10,00</li>
+          <li>Ovos mexido - R$ 3,50</li>
+          <li>Misto quente - R$ 7,00</li>
+          <li>Queijo quente - R$ 7,00</li>
+          <li>Tapioca - R$ 9,00</li>
+          <li>Crepioca - R$ 9,00</li>
+          <li>Omelete - R$ 9,00</li>
+          <li>Salada de fruta - R$ 10,00</li>
           <li>Café - R$ 3,00</li>
           <li>Café pingado - R$ 3,50</li>
-          <li>suco de laranja - R$ 8,00 / jarra R$ 15,00</li>
-          <li>suco de melancia - R$ 8,00 / jarra R$ 15,00</li>
-          <li>melão com hortelã - R$ 8,00 / jarra R$ 15,00</li>
-          <li>morango ao leite - R$9,00 / jarra R$ 18,00</li>
-          <li>banana com aveia - R$ 9,00 / jarra R$ 18,00</li>
+          <li>Suco de laranja - R$ 8,00 / Jarra R$ 15,00</li>
+          <li>Suco de melancia - R$ 8,00 / Jarra R$ 15,00</li>
+          <li>Melão com hortelã - R$ 8,00 / Jarra R$ 15,00</li>
+          <li>Morango ao leite - R$9,00 / Jarra R$ 18,00</li>
+          <li>Banana com aveia - R$ 9,00 / Jarra R$ 18,00</li>
         </ul>
       </Modal.Body>
       <Modal.Footer>

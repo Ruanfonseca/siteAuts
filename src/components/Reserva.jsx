@@ -18,7 +18,7 @@ export default function Testimonials() {
           serão mantidas até 10 minutos após o horário reservado e validadas
           somente em nome do responsável pelo contato,
           necessário levar documento de identificação com foto.
-          Em caso se lotação do espaço o cliente será avisado sobre a lista de espera.
+          Em caso de lotação do espaço o cliente será avisado sobre a lista de espera.
           Em caso de aniversário, reservar com antecedência informando o motivo da reserva.
         </p>
       </div>

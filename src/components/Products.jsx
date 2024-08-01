@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import { Button } from 'react-bootstrap';
 import styled from "styled-components";
+import product5 from "../assets/almocojanta.jpg";
 import product3 from "../assets/cafedamanha.jpg";
-import product2 from "../assets/diabetico.jpg";
 import product1 from "../assets/intolerante.jpg";
 import product4 from "../assets/petiscos.jpg";
+import product2 from "../assets/sobremesas.jpg";
+import AlmocoJanta from "../modals/ProductModal/AlmocoJanta/almocojanta";
 import CafeDaManhaModal from '../modals/ProductModal/cafedamanha/cafedamanha';
-import DiabeticosModal from '../modals/ProductModal/diabeticos/diabeticos';
 import IntoleranciasModal from '../modals/ProductModal/intolerancia/intolerancia';
 import PetiscosModal from '../modals/ProductModal/petiscos/petiscos';
+import SobremesasModal from '../modals/ProductModal/sobremesas/sobremesas';
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 
 export default function Products() {
   const [showModals, setShowModals] = useState({
     intolerancias: false,
-    diabeticos: false,
+    sobremesas: false,
     cafeDaManha: false,
     petiscos: false,
+    almocoJanta: false,
   });
 
   const handleShow = (modalName) => {
@@ -37,31 +40,38 @@ export default function Products() {
     {
       image: product1,
       name: "Intolerâncias",
-      description: "Opções deliciosas sem glúten e lactose, preparadas para quem tem intolerâncias alimentares.",
+      description: "Saboreie nossas opções especialmente preparadas sem glúten e lactose, ideais para quem possui intolerâncias alimentares.",
       modal: "intolerancias",
       Component: IntoleranciasModal
     },
     {
       image: product2,
-      name: "Diabéticos",
-      description: "Pratos especialmente desenvolvidos para quem precisa controlar o açúcar no sangue, sem abrir mão do sabor.",
-      modal: "diabeticos",
-      Component: DiabeticosModal
+      name: "Sobremesas",
+      description: "Doces irresistíveis que vão adoçar o seu dia. Experimente nossas deliciosas sobremesas.",
+      modal: "sobremesas",
+      Component: SobremesasModal
     },
     {
       image: product3,
       name: "Café da Manhã",
-      description: "Comece o dia com nossas opções variadas de café da manhã, de pães a frutas frescas e sucos.",
+      description: "Comece o dia com um café da manhã completo e nutritivo, com opções para todos os gostos.",
       modal: "cafeDaManha",
       Component: CafeDaManhaModal
     },
     {
       image: product4,
       name: "Petiscos",
-      description: "Petiscos variados para compartilhar, perfeitos para acompanhar uma boa conversa.",
+      description: "Petiscos variados, perfeitos para compartilhar e aproveitar com amigos e família.",
       modal: "petiscos",
       Component: PetiscosModal
     },
+    {
+      image: product5,
+      name: "Almoço & Janta",
+      description: "Refeições completas e saborosas para o seu almoço e jantar, preparadas com ingredientes frescos.",
+      modal: "almocoJanta",
+      Component: AlmocoJanta
+    }
   ];
 
   return (
@@ -77,7 +87,7 @@ export default function Products() {
           return (
             <div className="product" key={index}>
               <div className="image">
-                <img src={product.image} alt="" />
+                <img src={product.image} alt={product.name} />
               </div>
               <h2>{product.name}</h2>
               <h3>{product.description}</h3>
