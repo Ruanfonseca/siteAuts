@@ -1,26 +1,37 @@
-.thanks-container{
+/* Thanks.css */
+.thanks-container {
     text-align: center;
-}
-.thanks-container h2{
-    margin-bottom: 1;
-}
-.thanks-container p{
-    font-size:.9rem;
-    margin-bottom: .2rem;
-}
-
-.thanks-container h3{
-    margin:1rem 0;
-}
-
-.review-data{
+    padding: 10px; /* Ajuste do padding para deixar mais compacto */
+  }
+  
+  .thanks-container h2 {
+    margin-bottom: 8px; /* Redução das margens */
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+  }
+  
+  .thanks-container p {
+    font-size: 0.85rem; /* Redução do tamanho da fonte */
+    margin-bottom: 6px; /* Redução das margens */
+  }
+  
+  .thanks-container h3 {
+    margin: 6px 0; /* Redução das margens */
+    font-size: 0.95rem; /* Ajuste do tamanho da fonte */
+  }
+  
+  .review-data {
     text-align: left;
-}
-
-.review-data svg{
-    margin-left: 5px;
-}
-
-.review-data span{
+    max-height: 100px; /* Redução da altura máxima */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
+    font-size: 0.85rem; /* Redução do tamanho da fonte */
+    padding: 5px; /* Ajuste do padding para deixar mais compacto */
+  }
+  
+  .review-data svg {
+    margin-left: 3px; /* Redução das margens */
+  }
+  
+  .review-data span {
     font-weight: bold;
-}
+  }
+  
