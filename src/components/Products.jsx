@@ -54,7 +54,7 @@ export default function Products() {
     {
       image: product3,
       name: "Café da Manhã",
-      description: "Comece o dia com um café da manhã completo e nutritivo, com opções para todos os gostos.",
+      description: "Comece o dia com nossas variadas opções de café da manhã.",
       modal: "cafeDaManha",
       Component: CafeDaManhaModal
     },
