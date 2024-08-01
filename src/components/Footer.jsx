@@ -49,7 +49,7 @@ export default function Footer() {
           <div className="title">
             <h3>Contato</h3>
           </div>
-          <p>Telefone +55 21 964990304</p>
+          <p>Telefone +55 21 964990334</p>
           <p>Email Autsrestaurante@gmail.com</p>
           <p>Endereço: Rua Passagem Franca N2 - Guaratiba</p>
         </div>

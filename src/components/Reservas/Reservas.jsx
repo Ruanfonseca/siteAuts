@@ -41,7 +41,7 @@ function Reservas() {
       Termos Aceitos: ${valores.termosAceitos ? 'Aceito' : 'Não Aceito'}
     `;
     
-    const phoneNumber = '+5521964990304';
+    const phoneNumber = '+5521964990334';
     const messageText = encodeURIComponent(mensagem);
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`;
 
