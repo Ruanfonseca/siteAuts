@@ -19,23 +19,18 @@ const thanks = ({ data }) => {
     <div className='thanks-container'>
       <h2>Falta pouco...</h2>
       <p>Para concluir a avaliação clique no botão de Enviar abaixo.</p>
-      <br />
-      <h3>Aqui está o resumo do sua avaliação {data.nome}<br /></h3>
+      <h3>Aqui está o resumo do sua avaliação {data.nome}</h3>
       
-      <p className="review-data">
-        <br />
-        <span>Satisfação com o produto</span>
-        <br />
-        {emojiData[data.sentimento]}
-      </p>
-
-      <p className="review-data comment-section">
-        <br />
-        <span>Comentário:</span>
-        <br />
-        {data.comentario}
-      </p>
-
+      <div className="review-data">
+        <p>
+          <span>Satisfação com o produto</span>
+          {emojiData[data.sentimento]}
+        </p>
+        <p>
+          <span>Comentário:</span>
+          {data.comentario}
+        </p>
+      </div>
     </div>
   )
 }

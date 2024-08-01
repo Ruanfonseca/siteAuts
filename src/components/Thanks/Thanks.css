@@ -5,17 +5,17 @@
   }
   
   .thanks-container h2 {
-    margin-bottom: 8px; /* Redução das margens */
+    margin-bottom: 4px; /* Redução das margens */
     font-size: 1rem; /* Ajuste do tamanho da fonte */
   }
   
   .thanks-container p {
     font-size: 0.85rem; /* Redução do tamanho da fonte */
-    margin-bottom: 6px; /* Redução das margens */
+    margin-bottom: 4px; /* Redução das margens */
   }
   
   .thanks-container h3 {
-    margin: 6px 0; /* Redução das margens */
+    margin: 4px 0; /* Redução das margens */
     font-size: 0.95rem; /* Ajuste do tamanho da fonte */
   }
   
