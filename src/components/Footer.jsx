@@ -21,7 +21,8 @@ export default function Footer() {
           </p>
           <ul>
             <li>
-              <AiFillInstagram />
+              <a href="https://www.instagram.com/autsrestaurantee/" target="_blank"><AiFillInstagram /></a>
+
             </li>
             <li>
               <FaFacebookF />
@@ -39,18 +40,18 @@ export default function Footer() {
             <h3>Horário de Funcionamento</h3>
           </div>
           <p>
-          Segunda a Quinta  7:00 às 20:00 
+          Segunda a Quinta  06:00 às 20:00 
           <br/>
-          Sexta a Domingo 07:00 às 01:00
+          Sexta,Sábado e Domingo 06:00 às 01:00
           </p>
         </div>
         <div className="contact container">
           <div className="title">
             <h3>Contato</h3>
           </div>
-          <p>Telefone +55 21 97065-7441</p>
-          <p>Email Inclusão@autsrestaurante.com.br</p>
-          <p>Endereço: Rua passagem Franca S/n - Lote 3 Guaratiba</p>
+          <p>Telefone +55 21 964990304</p>
+          <p>Email Autsrestaurante@gmail.com</p>
+          <p>Endereço: Rua Passagem Franca N2 - Guaratiba</p>
         </div>
       </Section>
       <LowerFooter className="lower__footer">
