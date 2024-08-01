@@ -12,15 +12,15 @@ function SobremesasModal({ show, onHide, product }) {
         <Modal.Title>
           <div className="title-container">
             <img src={sobremesas} alt="Sobremesas" className="title-image" />
-            <span>Cardapio Sobremesas</span>
+            <span>Cardapio Sobremesas zero glúten e lactose</span>
           </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <ul>
-          <li>Quindim, sem gluten e sem lactose(leite de coco)</li>
-          <li>Pudim zero lactose </li>
-          <li>Surpresa de banana,(creme feito com leite vegetal e Amido)</li>
+          <li>Quindim, sem gluten e sem lactose(leite de coco) - R$10,00</li><br/>
+          <li>Pudim zero lactose - R$20,00 </li><br/>
+          <li>Surpresa de banana,(creme feito com leite vegetal e Amido) - R$20,00</li><br/>
         </ul>
       </Modal.Body>
       <Modal.Footer>

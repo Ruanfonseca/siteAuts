@@ -18,7 +18,12 @@ function AlmocoJanta({ show, onHide, product }) {
       </Modal.Header>
       <Modal.Body>
         <ul>
-          <li>Frango com quiabo(arroz,feijão e farofa) - R$ 6,50</li>
+          <li>Frango com quiabo(arroz,feijão e farofa)<br/>
+             Porção<br/>
+             P - R$17,00<br/>
+             M - R$30,00<br/>
+             G - R$60,00<br/>
+             </li>
           <li>
             Frango empanado(arroz, feijão,  farofa e salada da casa)<br/>
             Porção<br/>
