@@ -9,10 +9,10 @@ import './Thanks.css';
 
 
 const emojiData ={
-  unsatisfied:<BsFillEmojiFrownFill/>,
-  neutral:<BsFillEmojiNeutralFill/>,
-  very_satisfied:<BsFillEmojiHeartEyesFill/>,
-  satisfied:<BsFillEmojiSmileFill/>
+  insatisfeito:<BsFillEmojiFrownFill/>,
+  Um_pouco_Insatisfeito:<BsFillEmojiNeutralFill/>,
+  Muito_Satisfeito:<BsFillEmojiHeartEyesFill/>,
+  satisfeito:<BsFillEmojiSmileFill/>
 }
 
 const thanks = ({data}) => {

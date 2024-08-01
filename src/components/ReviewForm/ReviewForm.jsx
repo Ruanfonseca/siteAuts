@@ -16,9 +16,9 @@ const ReviewForm = ({data, updateFieldHandler}) => {
 
         <label className='radio-container'>
           <input type="radio"
-            value="neutro" 
+            value="Um_pouco_Insatisfeito" 
             name="sentimento"
-            checked={data.sentimento === "neutro"}
+            checked={data.sentimento === "Um_pouco_Insatisfeito"}
             onChange={(e) => updateFieldHandler("sentimento", e.target.value)}
             required />
           <BsFillEmojiNeutralFill/>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 import styled from "styled-components";
 import product5 from "../assets/almocojanta.jpg";
 import product3 from "../assets/cafedamanha.jpg";
@@ -11,7 +11,7 @@ import CafeDaManhaModal from '../modals/ProductModal/cafedamanha/cafedamanha';
 import IntoleranciasModal from '../modals/ProductModal/intolerancia/intolerancia';
 import PetiscosModal from '../modals/ProductModal/petiscos/petiscos';
 import SobremesasModal from '../modals/ProductModal/sobremesas/sobremesas';
-import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+import { TitleStyles } from "./ReusableStyles";
 
 export default function Products() {
   const [showModals, setShowModals] = useState({
@@ -74,35 +74,49 @@ export default function Products() {
     }
   ];
 
+  // Dividir os produtos em grupos de 3
+  const chunkedData = [];
+  for (let i = 0; i < data.length; i += 3) {
+    chunkedData.push(data.slice(i, i + 3));
+  }
+
   return (
     <Section id="products">
       <div className="title">
         <h1>
           <span>Nosso Cardápio</span>
         </h1>
+        <p>Explore nossas opções deliciosas e adequadas às suas necessidades.</p>
       </div>
-      <div className="products">
-        {data.map((product, index) => {
-          const { Component, modal } = product;
-          return (
-            <div className="product" key={index}>
-              <div className="image">
-                <img src={product.image} alt={product.name} />
-              </div>
-              <h2>{product.name}</h2>
-              <h3>{product.description}</h3>
-              <p>Explore nossas opções deliciosas e adequadas às suas necessidades.</p>
-              <Button onClick={() => handleShow(modal)}>Ver Mais</Button>
+      <Carousel indicators={false} controls={true} interval={null}>
+        {chunkedData.map((chunk, index) => (
+          <Carousel.Item key={index}>
+            <div className="products">
+              {chunk.map((product, idx) => {
+                const { Component, modal } = product;
+                return (
+                  <div className="product card" key={idx}>
+                    <div className="image card-img-top">
+                      <img src={product.image} alt={product.name} />
+                    </div>
+                    <div className="card-body">
+                      <h2 className="card-title">{product.name}</h2>
+                      <h3 className="card-text">{product.description}</h3>
+                      <Button onClick={() => handleShow(modal)}>Ver Mais</Button>
 
-              <Component
-                show={showModals[modal]}
-                onHide={() => handleClose(modal)}
-                product={product}
-              />
+                      <Component
+                        show={showModals[modal]}
+                        onHide={() => handleClose(modal)}
+                        product={product}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          );
-        })}
-      </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </Section>
   );
 }
@@ -110,62 +124,168 @@ export default function Products() {
 const Section = styled.section`
   ${TitleStyles};
   .products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 3rem;
     .product {
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
-      justify-content: center;
       align-items: center;
-      h3 {
-        color: #fc4958;
-        text-align: center;
-      }
-      p {
-        text-align: center;
-        font-size: 1.1rem;
-        line-height: 2rem;
-        letter-spacing: 0.1rem;
-      }
-      ${imageZoomEffect};
+      width: 100%;
+      max-width: 300px;
       .image {
-        max-height: 20rem;
+        max-height: 200px;
         overflow: hidden;
-        border-radius: 1rem;
+        border-radius: 1rem 1rem 0 0;
         img {
-          height: 20rem;
-          width: 15rem;
+          height: 100%;
+          width: 100%;
           object-fit: cover;
         }
       }
-      button {
-        border: none;
-        padding: 1rem 4rem;
-        font-size: 1.4rem;
-        color: white;
-        border-radius: 4rem;
-        transition: 0.5s ease-in-out;
-        cursor: pointer;
-        background: linear-gradient(to right, #fc4958, #e85d04);
-        text-transform: uppercase;
-        &:hover {
-          background: linear-gradient(to right, #e85d04, #fc4958);
+      .card-body {
+        padding: 1rem;
+        text-align: center;
+        h2 {
+          color: #fc4958;
+          margin-bottom: 0.5rem;
+        }
+        h3 {
+          color: #fc4958;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+          letter-spacing: 0.1rem;
+        }
+        button {
+          border: none;
+          padding: 0.5rem 2rem;
+          font-size: 1rem;
+          color: white;
+          border-radius: 4rem;
+          transition: 0.5s ease-in-out;
+          cursor: pointer;
+          background: linear-gradient(to right, #fc4958, #e85d04);
+          text-transform: uppercase;
+          &:hover {
+            background: linear-gradient(to right, #e85d04, #fc4958);
+          }
         }
       }
     }
   }
 
-  @media screen and (min-width: 280px) and (max-width: 720px) {
+  @media screen and (max-width: 480px) {
     .products {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      flex-direction: column;
+      align-items: center;
+      .product {
+        max-width: 100%;
+        .image {
+          max-height: 150px;
+          img {
+            height: 150px;
+          }
+        }
+        .card-body {
+          padding: 0.5rem;
+          h2, h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+          button {
+            padding: 0.4rem 1.5rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
     }
   }
-  @media screen and (min-width: 720px) and (max-width: 1080px) {
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
     .products {
-      grid-template-columns: repeat(2, 1fr);
+      .product {
+        max-width: 48%;
+        .image {
+          max-height: 180px;
+          img {
+            height: 180px;
+          }
+        }
+        .card-body {
+          padding: 0.7rem;
+          h2, h3 {
+            font-size: 1.1rem;
+          }
+          p {
+            font-size: 0.85rem;
+          }
+          button {
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    .products {
+      .product {
+        max-width: 32%;
+        .image {
+          max-height: 200px;
+          img {
+            height: 200px;
+          }
+        }
+        .card-body {
+          padding: 1rem;
+          h2, h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+          button {
+            padding: 0.5rem 2.5rem;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1201px) {
+    .products {
+      .product {
+        max-width: 30%;
+        .image {
+          max-height: 220px;
+          img {
+            height: 220px;
+          }
+        }
+        .card-body {
+          padding: 1.2rem;
+          h2, h3 {
+            font-size: 1.3rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+          button {
+            padding: 0.6rem 3rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
     }
   }
 `;
