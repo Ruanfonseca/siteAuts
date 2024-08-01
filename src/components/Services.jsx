@@ -8,14 +8,8 @@ export default function Services() {
       <div className="title">
         <h1 className="yellow">Sobre o AUTS</h1>
         <p>
-        Localizado em Guaratiba/RJ, o AUTS Restaurante & Lanchonete vem trazendo um 
-        conceito diferente de atendimento ao público infantojuvenil. De forma inclusiva, 
-        atendemos crianças e jovens com necessidades especiais, proporcionando um ambiente acolhedor e adaptado para
-         garantir a melhor experiência possível. Nosso espaço é cuidadosamente projetado para ser acessível, 
-         com menu diversificado que atende a diversas restrições alimentares e preferências. Além disso, 
-         nossa equipe é treinada para oferecer um atendimento personalizado, respeitando e valorizando as individualidades de 
-         cada cliente. No AUTS, acreditamos que todos merecem um espaço onde possam desfrutar de momentos felizes e 
-        saborosos com suas famílias e amigos.
+        Localizado em Guaratiba/RJ, o AUTS Restaurante & Lanchonete traz um conceito diferente de atendimento ao público infantojuvenil. De forma inclusiva, atendemos crianças e jovens com necessidades especiais, proporcionando um ambiente acolhedor e adaptado para garantir a melhor experiência possível. Nosso espaço é cuidadosamente projetado para ser acessível, com um menu diversificado que atende a diversas restrições alimentares e preferências. Além disso, nossa equipe é treinada para oferecer um atendimento personalizado, respeitando e valorizando as individualidades de cada cliente. No AUTS, acreditamos que todos merecem um espaço onde possam 
+        desfrutar de momentos felizes e saborosos com suas famílias e amigos.
         </p>
       </div>
       {/* <div className="services">
