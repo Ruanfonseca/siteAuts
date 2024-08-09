@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import hero from "../assets/bg.png";
+import hero from "../assets/capasite.png";
 
 
 
