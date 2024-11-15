@@ -15,9 +15,9 @@ export default function Footer() {
         <div className="brand container">
           <img src={logo} alt="" />
           <p>
-            Respeito , acolhimento e inclusão.
-            <br/>
-            Visite nossas Redes Sociais
+            Respeito , Acolhimento e Inclusão.
+            <br />
+            Visite Nossas Redes Sociais
           </p>
           <ul>
             <li>
@@ -40,9 +40,9 @@ export default function Footer() {
             <h3>Horário de Funcionamento</h3>
           </div>
           <p>
-          Segunda a Quinta  07:00 às 20:00 
-          <br/>
-          Sexta,Sábado e Domingo 07:00 às 22:00
+            Segunda a Quinta  07:00 às 20:00
+            <br />
+            Sexta,Sábado e Domingo 07:00 às 22:00
           </p>
         </div>
         <div className="contact container">
