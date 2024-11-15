@@ -40,9 +40,9 @@ export default function Footer() {
             <h3>Horário de Funcionamento</h3>
           </div>
           <p>
-          Segunda a Quinta  06:00 às 20:00 
+          Segunda a Quinta  07:00 às 20:00 
           <br/>
-          Sexta,Sábado e Domingo 06:00 às 01:00
+          Sexta,Sábado e Domingo 07:00 às 22:00
           </p>
         </div>
         <div className="contact container">
